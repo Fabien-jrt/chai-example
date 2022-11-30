@@ -29,4 +29,11 @@ describe('Testing the Trigangle function', function() {
         expect(triangle.getArea()).to.equal(252);
         done();
     });
+    it('The side length of the triangle', function(done) {
+        let triangle = new Triangle(1, 20, 30);
+        expect(triangle.getSideLength(0)).to.equal(20);
+        expect(triangle.getSideLength(1)).to.equal(30);
+        expect(triangle.getSideLength(2)).to.equal(26);
+        done()
+    })
 });
