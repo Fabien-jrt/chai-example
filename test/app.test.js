@@ -1,4 +1,5 @@
 const Cube = require('../src/app').Cube;
+const Triangle = require('../src/app').Triangle;
 const expect = require('chai').expect;
 
 describe('Testing the Cube Functions', function() {
@@ -20,4 +21,12 @@ describe('Testing the Cube Functions', function() {
         done();
     });
     
+});
+
+describe('Testing the Trigangle function', function() {
+    it('The area of the Triangle', function(done) {
+        let triangle = new Triangle(1, 20, 30);
+        expect(triangle.getArea()).to.equal(252);
+        done();
+    });
 });
