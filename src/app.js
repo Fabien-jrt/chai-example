@@ -25,7 +25,7 @@ class Triangle {
     }
     
     getArea() {
-        return Math.round(0.5 * this.len1 * this.len2 * Math.sin(this.angle))
+        return Math.round(0.5 * this.len1 * this.len2 * Math.sin(this.angle));
     }
     
     getSideLength(side) {
@@ -34,7 +34,11 @@ class Triangle {
         if (side === 1)
             return this.len2;
         // c = √b2 + a2 - 2ba·cos(C) = 25.52719
-        return Math.round(Math.sqrt(Math.pow(this.len2, 2) + Math.pow(this.len1, 2) - 2 * this.len2 * this.len1 * Math.cos(this.angle))) 
+        return Math.round(Math.sqrt(Math.pow(this.len2, 2) + Math.pow(this.len1, 2) - 2 * this.len2 * this.len1 * Math.cos(this.angle))); 
+    }
+    
+    getPerimeter() {
+        return Math.round(this.len1 + this.len2 + this.getSideLength(2));
     }
 }
 
