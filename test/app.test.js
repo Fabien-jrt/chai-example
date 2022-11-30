@@ -34,6 +34,11 @@ describe('Testing the Trigangle function', function() {
         expect(triangle.getSideLength(0)).to.equal(20);
         expect(triangle.getSideLength(1)).to.equal(30);
         expect(triangle.getSideLength(2)).to.equal(26);
-        done()
-    })
+        done();
+    });
+    it('The perimeter of the triangle', function(done) {
+        let triangle = new Triangle(1, 20, 30);
+        expect(triangle.getPerimeter()).to.equal(76);
+        done();
+    });
 });
