@@ -40,6 +40,14 @@ class Triangle {
     getPerimeter() {
         return Math.round(this.len1 + this.len2 + this.getSideLength(2));
     }
+    
+    getHeight(side) {
+        if (side === 0)
+            return Math.round((2 * this.getArea()) / this.len2);
+        if (side === 1)
+            return Math.round((2 * this.getArea()) / this.len1);
+        return Math.round((2 * this.getArea()) / this.getSideLength(2)); 
+    }
 }
 
 module.exports = {
