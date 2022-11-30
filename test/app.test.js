@@ -29,16 +29,23 @@ describe('Testing the Trigangle function', function() {
         expect(triangle.getArea()).to.equal(252);
         done();
     });
-    it('The side length of the triangle', function(done) {
+    it('The side length of the Triangle', function(done) {
         let triangle = new Triangle(1, 20, 30);
         expect(triangle.getSideLength(0)).to.equal(20);
         expect(triangle.getSideLength(1)).to.equal(30);
         expect(triangle.getSideLength(2)).to.equal(26);
         done();
     });
-    it('The perimeter of the triangle', function(done) {
+    it('The perimeter of the Triangle', function(done) {
         let triangle = new Triangle(1, 20, 30);
         expect(triangle.getPerimeter()).to.equal(76);
         done();
     });
+    it('The height of a side of the Triangle', function(done) {
+        let triangle = new Triangle(1, 20, 30);
+        expect(triangle.getHeight(0)).to.equal(17);
+        expect(triangle.getHeight(1)).to.equal(25);
+        expect(triangle.getHeight(2)).to.equal(19);
+        done();
+    })
 });
